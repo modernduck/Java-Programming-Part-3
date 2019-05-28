@@ -8,11 +8,12 @@ public class Finbonacci {
 		
 		System.out.print(a + " " + b + " ");
 		int nextFibonnaci = a + b;
-		System.out.print(nextFibonnaci + " ");
-		a = b;
-		b = nextFibonnaci;
-		nextFibonnaci = a + b;
-		System.out.print(nextFibonnaci + " ");
+		while(nextFibonnaci < 100) {
+			System.out.print(nextFibonnaci + " ");
+			a = b;
+			b = nextFibonnaci;
+			nextFibonnaci = a + b;
+		}
 		
 	}
 
