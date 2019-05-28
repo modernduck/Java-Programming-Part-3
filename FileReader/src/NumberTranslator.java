@@ -8,36 +8,35 @@ public class NumberTranslator {
 		// TODO Auto-generated method stub
 		File sourceFile = new File("C:\\Users\\Administrator\\eclipse-workspace\\Java-Programming-Part-3\\FileReader\\src\\input.txt");
 		Scanner in = new Scanner(sourceFile);
-		
+		String result = "";
 		while(in.hasNextInt()) {
 			//System.out.println(in.nextInt());
 			int number = in.nextInt();
 			switch(number) {
-			case 1: System.out.println("one");
+			case 1: result = result + "one";
 				break;
-			case 2: System.out.println("two");
+			case 2: result = result + "two";
 				break;
-			case 3: System.out.println("three");
+			case 3:  result = result + "three";
 				break;
-			case 4: System.out.println("four");
+			case 4:  result = result + "four";
 				break;
-			case 5: System.out.println("five");
+			case 5:  result = result + "five";
 				break;
-			case 6: System.out.println("six");
+			case 6:  result = result + "six";
 				break;
-			case 7: System.out.println("seven");
+			case 7:  result = result + "seven";
 				break;
-			case 8: System.out.println("eight");
+			case 8:  result = result + "eight";
 				break;
-			case 9: System.out.println("nine");
+			case 9:  result = result + "nine";
 				break;
-			case 10: System.out.println("ten");
+			case 10:  result = result + "ten";
 				break;
-			default:
-				System.out.println("-");
-				
 			}
+			result = result + "/r/n";
 		}
+		System.out.print(result);
 		
 	}
 
