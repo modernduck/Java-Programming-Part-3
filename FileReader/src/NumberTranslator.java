@@ -1,10 +1,13 @@
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Scanner;
 
 public class NumberTranslator {
 
-	public static void main(String[] args) throws FileNotFoundException {
+	public static void main(String[] args) throws IOException {
 		// TODO Auto-generated method stub
 		File sourceFile = new File("C:\\Users\\Administrator\\eclipse-workspace\\Java-Programming-Part-3\\FileReader\\src\\input.txt");
 		Scanner in = new Scanner(sourceFile);
@@ -34,10 +37,13 @@ public class NumberTranslator {
 			case 10:  result = result + "ten";
 				break;
 			}
-			result = result + "/r/n";
+			result = result + "\r\n";
 		}
-		System.out.print(result);
+		File destination = new File("C:\\Users\\Administrator\\Desktop\\output.txt");
+		BufferedWriter out = new BufferedWriter(new FileWriter(destination));
 		
+		out.write(result);
+		out.close();
 	}
 
 }
