@@ -12,10 +12,10 @@ public class Triangle {
 		// TODO Auto-generated method stub
 		Scanner in = new Scanner(System.in);
 		int row = in.nextInt();
-		int counter = 1;
-		while(counter <= row) {
+		int counter = row;
+		while(counter > 0) {
 			pimdow(counter);
-			counter = counter + 1;
+			counter = counter - 1;
 		}
 		
 	}
