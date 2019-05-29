@@ -42,13 +42,17 @@ public class csvReader {
 		System.out.println("Max Name " + maxName);
 		File destinationFile = new File("C:\\Users\\Administrator\\Desktop\\lottery.csv");
 		BufferedWriter out = new BufferedWriter(new FileWriter(destinationFile));
-		out.write("CITY,STATE,FIRST PRIZE,2TUA\n");
+		out.write("CODE,CITY,STATE,FIRST PRIZE,2TUA\n");
 		for(int i = 0;i < cities.length; i ++) {
 			//int a =  (int) Math.floor(Math.random()*1000000);
-			String row = cities[i] + "," + states[i] + "," +  randomNumber(7) + "," + randomNumber(2) + "\n";
+			String shortName = cities[i].charAt(0) + "" + cities[i].charAt(1);
+			String row = shortName + "," + cities[i] + "," + states[i] + "," +  randomNumber(7) + "," + randomNumber(2) + "\n";
+			 
 			out.write(row);
 		}
 		out.close();
+	//	String test = "Bangkok";
+		//System.out.println(test.charAt(0) + "" + test.charAt(1));
 		//System.out.println(sc.next());
 	}
 	
