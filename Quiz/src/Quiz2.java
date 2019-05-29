@@ -9,7 +9,8 @@ public class Quiz2 {
 		// TODO Auto-generated method stub
 		File destinationFile = new File("C:\\Users\\Administrator\\Desktop\\sequence.txt");
 		BufferedWriter out = new BufferedWriter(new FileWriter(destinationFile));
-		for(int i = 1 ; i <= 100000; i++) {
+		out.write(1 + "\r\n");
+		for(int i = 0 ; i <= 100000; i = i + 5) {
 //			System.out.println(i);
 			out.write(i + "\r\n");
 		}
